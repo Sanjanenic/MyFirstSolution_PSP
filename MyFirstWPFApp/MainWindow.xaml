@@ -1,0 +1,73 @@
+﻿<Window x:Class="MyFirstWPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyFirstWPFApp"
+        mc:Ignorable="d"
+        Title="Hello World" Height="450" Width="800">
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">Heute ist Donnerstag</StatusBar>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Open"/>
+                <MenuItem Header="Close"/>
+            </MenuItem>
+            <MenuItem Header="Bearbeiten">
+                <MenuItem Header="Ausschneiden"/>
+                <MenuItem Header="Löschen"/>
+            </MenuItem>
+        </Menu>
+        <Button DockPanel.Dock="Top" Content="Hello World" FontSize="7" Background="Azure"/>
+        <StackPanel DockPanel.Dock="Top">
+           
+            <Button>Hello Variante 1 - Default Content</Button>
+            <Button Content="Hello Variante 2 über Property"></Button>
+            <Button>
+                <Button.Content><!--Property Element Syntax-->
+                    <StackPanel>
+                        <TextBlock>Hello von Campus</TextBlock>
+                        <CheckBox/>
+                    </StackPanel>
+                </Button.Content>
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock>Hilfetext</TextBlock>
+                        <Ellipse Fill="Aqua" Width="10" Height="20"/>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <GroupBox Header="weitere Infos">
+                <GroupBox.Content>
+                    <StackPanel>
+                        <Label Content="A"/>
+                        <Label Content="B"/>
+
+                    </StackPanel>
+                </GroupBox.Content>
+            </GroupBox>
+            <Expander Header="weitere Infos">
+                <Expander.Content>
+                    <StackPanel>
+                        <Label Content="A"/>
+                        <Label Content="B"/>
+
+                    </StackPanel>
+                </Expander.Content>
+            </Expander>
+            <RadioButton>Master</RadioButton>
+            <RadioButton>Visa</RadioButton>
+            <RadioButton>PayPal</RadioButton>
+            <GroupBox Header="Zahlungsvarianten">
+                <ListBox>
+                    <ComboBoxItem>Visa</ComboBoxItem>
+                    <ComboBoxItem>Master</ComboBoxItem>
+                </ListBox>
+            </GroupBox>
+            
+        </StackPanel>
+        <Button  DockPanel.Dock="Bottom" Content="Hello Campus" FontSize="7" Background="Azure"></Button>
+        <Image Source="leopard-1647940_960_720.jpg" />
+        
+    </DockPanel>
+</Window>
